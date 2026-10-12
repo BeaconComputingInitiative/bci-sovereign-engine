@@ -1,7 +1,7 @@
 """
 =====================================================================
 Developer: Chance Joaquin Boone
-Project: BCIai Platform (Computer Beacon Intelligence)
+Project: Erudite — Beacon Computing Initiative
 Module: Unified System Control Dashboard (PyQt5 port)
 Developer Seal: BCI-CORE-UNIFIED-GUI-V3-QT
 =====================================================================
@@ -587,7 +587,7 @@ class OrbitalTab(QWidget):
 class BCIaiMainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("⚡ BCIai Unified Control Center")
+        self.setWindowTitle("Erudite")
         self.resize(1280, 800)
 
         self.df: Optional[pd.DataFrame] = None
@@ -654,3 +654,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

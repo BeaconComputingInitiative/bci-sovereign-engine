@@ -1,7 +1,7 @@
 """
 =====================================================================
 Developer: Chance Joaquin Boone
-Project: BCIai Platform (Computer Beacon Intelligence)
+Project: Erudite — Beacon Computing Initiative
 Module: Unified System Control Dashboard (Left-Panel Data Importer)
 Developer Seal: BCI-CORE-UNIFIED-GUI-V3-QT
 =====================================================================
@@ -216,12 +216,12 @@ class BCIBootScreen(QWidget):
         layout = QVBoxLayout(self)
         layout.setContentsMargins(24, 24, 24, 24)
 
-        header = QLabel("⚡ COMPUTER BEACON INTELLIGENCE")
+        header = QLabel("Erudite")
         header.setStyleSheet("font-size: 18px; font-weight: bold; color: #58a6ff;")
         header.setAlignment(Qt.AlignCenter)
         layout.addWidget(header)
 
-        sub_header = QLabel("BCIai Platform Architecture • Unified System Core")
+        sub_header = QLabel("Beacon Computing Initiative • Unified System Core")
         sub_header.setStyleSheet("font-size: 11px; color: #8b949e;")
         sub_header.setAlignment(Qt.AlignCenter)
         layout.addWidget(sub_header)
@@ -241,7 +241,7 @@ class BCIBootScreen(QWidget):
         self.progress_bar.setValue(0)
         layout.addWidget(self.progress_bar)
 
-        self.seal_label = QLabel("Developer Seal: BCI-CORE-UNIFIED-GUI-V3-QT")
+        self.seal_label = QLabel("Developer Seal: Chance Joaquin Boone • BCI-CORE-UNIFIED-GUI-V3-QT")
         self.seal_label.setStyleSheet("font-size: 10px; color: #484f58;")
         self.seal_label.setAlignment(Qt.AlignRight)
         layout.addWidget(self.seal_label)
@@ -831,7 +831,7 @@ class OrbitalTab(QWidget):
 class BCIaiMainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("⚡ Beacon Computing Initiative — BCIai Control Dashboard")
+        self.setWindowTitle("Erudite")
         self.resize(1280, 800)
 
         self.df: Optional[pd.DataFrame] = None
@@ -904,3 +904,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

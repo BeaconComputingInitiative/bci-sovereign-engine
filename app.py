@@ -1,3 +1,4 @@
+# Beacon Computing Initiative | Erudite | Developer Seal: Chance Joaquin Boone (CJB)
 # Developers seal: Chance Joaquin Boone
 
 import os
@@ -7,7 +8,7 @@ import torch
 import torch.nn as nn
 
 st.set_page_config(
-    page_title="Beacon Computing Initiative (BCI) Control Center",
+    page_title="Erudite",
     page_icon="⚡",
     layout="wide"
 )
@@ -54,14 +55,16 @@ def load_sovereign_model():
     return model, False
 
 # Sidebar Navigation
-st.sidebar.title("BCI Sovereign Engine")
+st.sidebar.title("Erudite")
+st.sidebar.caption("Beacon Computing Initiative")
+st.sidebar.caption("Developer Seal: Chance Joaquin Boone (CJB)")
 page = st.sidebar.radio(
     "Navigation", 
-    ["Dashboard & Telemetry", "Admin & Model Controls", "Sovereign Terminal", "Sovereign Chat"]
+    ["Dashboard & Telemetry", "Admin & Model Controls", "Erudite Terminal", "Erudite Chat"]
 )
 
 def render_dashboard():
-    st.title("⚡ BCI Operations Dashboard")
+    st.title("Erudite · Operations Dashboard")
     st.markdown("Real-time telemetry and operational overview for local node inference and training.")
     
     col1, col2, col3 = st.columns(3)
@@ -90,7 +93,7 @@ def render_dashboard():
             st.text(f"✘ {ds} (Missing)")
 
 def render_admin():
-    st.title("🛠️ BCI Admin & Model Control")
+    st.title("Erudite · Model Controls")
     st.markdown("Execute maintenance tasks, trigger live training sequences, and manage checkpoint files.")
     
     col1, col2 = st.columns(2)
@@ -143,7 +146,7 @@ def render_admin():
             st.warning("No active checkpoint file found in `checkpoints/`.")
 
 def render_terminal():
-    st.title("💻 Sovereign Terminal")
+    st.title("Erudite · Terminal")
     st.markdown("Execute system commands directly within the local BCI environment node.")
     
     if "terminal_history" not in st.session_state:
@@ -175,7 +178,7 @@ def render_terminal():
             st.code(item['out'])
 
 def render_chat():
-    st.title("💬 Sovereign Chat Interface")
+    st.title("Erudite · Chat")
     st.markdown("Interact directly with the local BCI neural engine.")
     
     model, is_loaded = load_sovereign_model()
@@ -227,7 +230,8 @@ if page == "Dashboard & Telemetry":
     render_dashboard()
 elif page == "Admin & Model Controls":
     render_admin()
-elif page == "Sovereign Terminal":
+elif page == "Erudite Terminal":
     render_terminal()
-elif page == "Sovereign Chat":
+elif page == "Erudite Chat":
     render_chat()
+

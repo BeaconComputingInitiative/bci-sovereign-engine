@@ -1,7 +1,7 @@
 """
 =====================================================================
 Developer: Chance Joaquin Boone
-Project: BCIai Platform (Computer Beacon Intelligence)
+Project: Erudite — Beacon Computing Initiative
 Module: PyQt5 Desktop UI & Engine Controller
 Developer Seal: BCI-CUSTOM-LLM-CORE-V7-TORCH
 =====================================================================
@@ -118,7 +118,8 @@ class BCIaiMainWindow(QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = BCIaiMainWindow()
-    window.setWindowTitle("BCIai LLM Control Center")
+    window.setWindowTitle("Erudite")
     window.resize(1000, 600)
     window.show()
     sys.exit(app.exec_())
+
